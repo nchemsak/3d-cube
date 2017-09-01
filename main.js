@@ -21,7 +21,7 @@ Element.prototype.toggleClassName = function(a) {
 };
 
 var init = function() {
-    var box = document.querySelector('.container').children[0],
+    var box = document.querySelector('.box-container').children[0],
         showPanelButtons = document.querySelectorAll('#controls button'),
         panelClassName = 'show-front',
 

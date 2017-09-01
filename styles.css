@@ -12,16 +12,17 @@ figure {
     margin: 0;
 }
 
-.container {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    margin: 0 auto 40px;
-    border: 1px solid #CCC;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    -o-perspective: 1000px;
-    perspective: 1000px;
+.box-container {
+    /*if you change the width and height here, change all the "translateZ( 50px)" below to half the px*/
+    width: 100px;
+    height: 100px;
+    /*position: relative;*/
+    /*margin: 0 auto 40px;*/
+    /*border: 1px solid #CCC;*/
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    -o-perspective: 500px;
+    perspective: 500px;
 }
 
 .cube {
@@ -32,31 +33,31 @@ figure {
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    -webkit-transition: -webkit-transform 1s;
-    -moz-transition: -moz-transform 1s;
-    -o-transition: -o-transform 1s;
-    transition: transform 1s;
+    /*speed of rotation*/
+    -webkit-transition: -webkit-transform 1.5s;
+    -moz-transition: -moz-transform 1.5s;
+    -o-transition: -o-transform 1.5s;
+    transition: transform 1.5s;
 }
 
 .cube figure {
     display: block;
     position: absolute;
-    width: 196px;
-    height: 196px;
-    border: 2px solid black;
-    line-height: 196px;
-    font-size: 120px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
+    /*    width: 196px;
+    height: 196px;*/
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid black;*/
+    /*color: white;*/
+    /*text-align: center;*/
 }
 
-.cube.panels-backface-invisible figure {
+/*.cube.panels-backface-invisible figure {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -o-backface-visibility: hidden;
     backface-visibility: hidden;
-}
+}*/
 
 .cube .sample {
     background: hsla( 0, 100%, 50%, 0.7);
@@ -83,85 +84,85 @@ figure {
 }
 
 .cube .sample {
-    -webkit-transform: translateZ( 100px);
-    -moz-transform: translateZ( 100px);
-    -o-transform: translateZ( 100px);
-    transform: translateZ( 100px);
+    -webkit-transform: translateZ( 50px);
+    -moz-transform: translateZ( 50px);
+    -o-transform: translateZ( 50px);
+    transform: translateZ( 50px);
 }
 
 .cube .back {
-    -webkit-transform: rotateX( -180deg) translateZ( 100px);
-    -moz-transform: rotateX( -180deg) translateZ( 100px);
-    -o-transform: rotateX( -180deg) translateZ( 100px);
-    transform: rotateX( -180deg) translateZ( 100px);
+    -webkit-transform: rotateX( -180deg) translateZ( 50px);
+    -moz-transform: rotateX( -180deg) translateZ( 50px);
+    -o-transform: rotateX( -180deg) translateZ( 50px);
+    transform: rotateX( -180deg) translateZ( 50px);
 }
 
 .cube .right {
-    -webkit-transform: rotateY( 90deg) translateZ( 100px);
-    -moz-transform: rotateY( 90deg) translateZ( 100px);
-    -o-transform: rotateY( 90deg) translateZ( 100px);
-    transform: rotateY( 90deg) translateZ( 100px);
+    -webkit-transform: rotateY( 90deg) translateZ( 50px);
+    -moz-transform: rotateY( 90deg) translateZ( 50px);
+    -o-transform: rotateY( 90deg) translateZ( 50px);
+    transform: rotateY( 90deg) translateZ( 50px);
 }
 
 .cube .left {
-    -webkit-transform: rotateY( -90deg) translateZ( 100px);
-    -moz-transform: rotateY( -90deg) translateZ( 100px);
-    -o-transform: rotateY( -90deg) translateZ( 100px);
-    transform: rotateY( -90deg) translateZ( 100px);
+    -webkit-transform: rotateY( -90deg) translateZ( 50px);
+    -moz-transform: rotateY( -90deg) translateZ( 50px);
+    -o-transform: rotateY( -90deg) translateZ( 50px);
+    transform: rotateY( -90deg) translateZ( 50px);
 }
 
 .cube .top {
-    -webkit-transform: rotateX( 90deg) translateZ( 100px);
-    -moz-transform: rotateX( 90deg) translateZ( 100px);
-    -o-transform: rotateX( 90deg) translateZ( 100px);
-    transform: rotateX( 90deg) translateZ( 100px);
+    -webkit-transform: rotateX( 90deg) translateZ( 50px);
+    -moz-transform: rotateX( 90deg) translateZ( 50px);
+    -o-transform: rotateX( 90deg) translateZ( 50px);
+    transform: rotateX( 90deg) translateZ( 50px);
 }
 
 .cube .bottom {
-    -webkit-transform: rotateX( -90deg) translateZ( 100px);
-    -moz-transform: rotateX( -90deg) translateZ( 100px);
-    -o-transform: rotateX( -90deg) translateZ( 100px);
-    transform: rotateX( -90deg) translateZ( 100px);
+    -webkit-transform: rotateX( -90deg) translateZ( 50px);
+    -moz-transform: rotateX( -90deg) translateZ( 50px);
+    -o-transform: rotateX( -90deg) translateZ( 50px);
+    transform: rotateX( -90deg) translateZ( 50px);
 }
 
 .cube.show-front {
-    -webkit-transform: translateZ( -100px);
-    -moz-transform: translateZ( -100px);
-    -o-transform: translateZ( -100px);
-    transform: translateZ( -100px);
+    -webkit-transform: translateZ( -50px);
+    -moz-transform: translateZ( -50px);
+    -o-transform: translateZ( -50px);
+    transform: translateZ( -50px);
 }
 
 .cube.show-back {
-    -webkit-transform: translateZ( -100px) rotateX( -180deg);
-    -moz-transform: translateZ( -100px) rotateX( -180deg);
-    -o-transform: translateZ( -100px) rotateX( -180deg);
-    transform: translateZ( -100px) rotateX( -180deg);
+    -webkit-transform: translateZ( -50px) rotateX( -180deg);
+    -moz-transform: translateZ( -50px) rotateX( -180deg);
+    -o-transform: translateZ( -50px) rotateX( -180deg);
+    transform: translateZ( -50px) rotateX( -180deg);
 }
 
 .cube.show-right {
-    -webkit-transform: translateZ( -100px) rotateY( -90deg);
-    -moz-transform: translateZ( -100px) rotateY( -90deg);
-    -o-transform: translateZ( -100px) rotateY( -90deg);
-    transform: translateZ( -100px) rotateY( -90deg);
+    -webkit-transform: translateZ( -50px) rotateY( -90deg);
+    -moz-transform: translateZ( -50px) rotateY( -90deg);
+    -o-transform: translateZ( -50px) rotateY( -90deg);
+    transform: translateZ( -50px) rotateY( -90deg);
 }
 
 .cube.show-left {
-    -webkit-transform: translateZ( -100px) rotateY( 90deg);
-    -moz-transform: translateZ( -100px) rotateY( 90deg);
-    -o-transform: translateZ( -100px) rotateY( 90deg);
-    transform: translateZ( -100px) rotateY( 90deg);
+    -webkit-transform: translateZ( -50px) rotateY( 90deg);
+    -moz-transform: translateZ( -50px) rotateY( 90deg);
+    -o-transform: translateZ( -50px) rotateY( 90deg);
+    transform: translateZ( -50px) rotateY( 90deg);
 }
 
 .cube.show-top {
-    -webkit-transform: translateZ( -100px) rotateX( -90deg);
-    -moz-transform: translateZ( -100px) rotateX( -90deg);
-    -o-transform: translateZ( -100px) rotateX( -90deg);
-    transform: translateZ( -100px) rotateX( -90deg);
+    -webkit-transform: translateZ( -50px) rotateX( -90deg);
+    -moz-transform: translateZ( -50px) rotateX( -90deg);
+    -o-transform: translateZ( -50px) rotateX( -90deg);
+    transform: translateZ( -50px) rotateX( -90deg);
 }
 
 .cube.show-bottom {
-    -webkit-transform: translateZ( -100px) rotateX( 90deg);
-    -moz-transform: translateZ( -100px) rotateX( 90deg);
-    -o-transform: translateZ( -100px) rotateX( 90deg);
-    transform: translateZ( -100px) rotateX( 90deg);
+    -webkit-transform: translateZ( -50px) rotateX( 90deg);
+    -moz-transform: translateZ( -50px) rotateX( 90deg);
+    -o-transform: translateZ( -50px) rotateX( 90deg);
+    transform: translateZ( -50px) rotateX( 90deg);
 }
